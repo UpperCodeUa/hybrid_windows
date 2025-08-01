@@ -1,0 +1,100 @@
+plugins:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.4.2
+  Exclude:
+    - db/**/*
+    - bin/*
+    - config/deploy.rb
+    - vendor/bundle/**/*
+
+Rails:
+  Enabled: true
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*'
+
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: 'double_quotes'
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Lint/MissingSuper:
+  Exclude:
+    - 'app/commands/**/*'
+    - 'app/presenters/**/*'
+    - 'app/queries/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'app/commands/**/*'
+    - 'app/presenters/**/*'
+    - 'app/queries/**/*'
+    - 'app/controllers/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/commands/**/*'
+    - 'app/presenters/**/*'
+    - 'app/queries/**/*'
+    - 'app/controllers/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'app/commands/**/*'
+    - 'app/presenters/**/*'
+    - 'app/queries/**/*'
+    - 'app/controllers/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/tasks/*'
+
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/*'

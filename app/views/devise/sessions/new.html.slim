@@ -1,0 +1,11 @@
+.log-in-wrapper
+  = image_tag "decor/item1.svg", title: 'image', alt: 'image', class: 'decor-item1'
+  = image_tag "decor/item2.svg", title: 'image', alt: 'image', class: 'decor-item2'
+  = image_tag "decor/item3.svg", title: 'image', alt: 'image', class: 'decor-item3'
+  .log-in-box
+    .title Вхід
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .inner-box
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'ВВЕДІТЬ ЛОГІН'
+        = f.password_field :password, autocomplete: "current-password", placeholder: 'ВВЕДІТЬ ПАРОЛЬ'
+      = f.submit "ВВІЙТИ", class: 'button-log-in'

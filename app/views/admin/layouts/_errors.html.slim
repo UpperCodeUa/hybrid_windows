@@ -1,0 +1,6 @@
+- if record.errors.any?
+  section
+    h2.section-title = t('errors.label')
+    ul
+      - record.errors.full_messages.each do |message|
+        li = message

@@ -1,0 +1,2 @@
+class SolidQueueAuthorizerPolicy < ApplicationPolicy
+end
