@@ -66,7 +66,7 @@ group :test do
   gem "capybara-screenshot", "~> 1.0", ">= 1.0.26"
   gem "capybara_watcher", "~> 0.1.2"
   gem "database_cleaner", "~> 2.0", ">= 2.0.2"
-  gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
+  gem "factory_bot_rails", "~> 6.5"
   gem "rack_session_access", "~> 0.2.0"
   gem "rails-controller-testing", "~> 1.0", ">= 1.0.5"
   gem "rspec-rails", "~> 6.1", ">= 6.1.1"
