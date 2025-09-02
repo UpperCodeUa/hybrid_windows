@@ -14,10 +14,10 @@ image: theuppercode/hybrid_windows
 # Deploy to these servers.
 servers:
   web:
-    - XXX.XXX.XXX.XXX
+    - 139.59.146.173
   job:
     hosts:
-      - XXX.XXX.XXX.XXX
+      - 139.59.146.173
     cmd: bin/jobs
 
 # Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
@@ -114,7 +114,7 @@ builder:
 accessories:
   db:
     image: postgres:17
-    host: XXX.XXX.XXX.XXX
+    host: 139.59.146.173
     port: 127.0.0.1:5432:5432
     env:
       secret:
