@@ -1,0 +1,69 @@
+section.product-section data-controller="tabs"
+    .container
+        .product-section-box
+            .tabs-box
+                .tab-button.active data-tabs-target="button" data-button="windows" data-action="click->tabs#change"
+                    = image_tag "products/img1.jpg", alt: 'image', title: 'image'
+                    p.name ВІКНА
+                .tab-button data-tabs-target="button" data-button="door" data-action="click->tabs#change"
+                    = image_tag "products/img2.jpg", alt: 'image', title: 'image'
+                    p.name ДВЕРІ
+                .tab-button data-tabs-target="button" data-button="sliding_systems" data-action="click->tabs#change"
+                    = image_tag "products/img3.jpg", alt: 'image', title: 'image'
+                    p.name РОЗСУВНІ СИСТЕМИ
+                .tab-button data-tabs-target="button" data-button="blinds" data-action="click->tabs#change"
+                    = image_tag "products/img4.jpg", alt: 'image', title: 'image'
+                    p.name ЖАЛЮЗІ У СКЛОПАКЕТІ
+            .line
+            .items.active data-tabs-target="box" data-box="windows"
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ВІКНА P8 PASSIVE
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ВІКНА P8 PASSIVE
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ВІКНА P8 PASSIVE
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ВІКНА P8 PASSIVE
+            .items data-tabs-target="box" data-box="door"
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ДВЕРІ P8 PASSIVE
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ДВЕРІ P8 PASSIVE
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ДВЕРІ P8 PASSIVE
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ДВЕРІ P8 PASSIVE
+            .items data-tabs-target="box" data-box="sliding_systems"
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name РОЗСУВНІ СИСТЕМИ
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name РОЗСУВНІ СИСТЕМИ
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name РОЗСУВНІ СИСТЕМИ
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name РОЗСУВНІ СИСТЕМИ
+            .items data-tabs-target="box" data-box="blinds"
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ЖАЛЮЗІ У СКЛОПАКЕТІ
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ЖАЛЮЗІ У СКЛОПАКЕТІ
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ЖАЛЮЗІ У СКЛОПАКЕТІ
+                a.item href="/product-page"
+                    = image_tag "products/img5.png", alt: 'image', title: 'image'
+                    .name ЖАЛЮЗІ У СКЛОПАКЕТІ

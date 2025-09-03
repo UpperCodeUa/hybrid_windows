@@ -1,0 +1,155 @@
+.catalog-section {
+    .catalog-section-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2.222vw;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .download-button {
+                border-radius: 8px;
+                background: #D91722;
+                color: #FFF;
+                font-family: "Unbounded";
+                font-size: 1.111vw;
+                font-weight: 500;
+                line-height: 140%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.556vw;
+                padding: 0.833vw 1.667vw;
+                img {
+                    width: 1.667vw;
+                    height: 1.667vw;
+                }
+            }
+        }
+        .catalog-box {
+            width: 100%;
+            height: 50vw;
+            .item {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(130, 130, 130);
+            }
+        }
+    }
+}
+
+.section-calculator {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(calculator/image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .inner-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2.222vw;
+        max-width: 67.917vw;
+        width: 100%;
+        .bottom-form-box {
+            margin-top: 1.111vw;
+        }
+    }
+}
+
+.product-section {
+    padding: 6.111vw 0;
+    height: 100vw;
+    width: 100%;
+    background: rgba(14, 14, 14, 0.80);
+    backdrop-filter: blur(3px);
+    .product-section-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.667vw;
+        .tabs-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.667vw;
+            .tab-button {
+                width: 100%;
+                height: 8.333vw;
+                position: relative;
+                border-radius: 8px;
+                border: 1px solid #595959;
+                overflow: hidden;
+                transition: all .5s;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .name {
+                    color:  #FFF;
+                    text-align: center;
+                    font-family: "Montserrat";
+                    font-size: 1.389vw;
+                    font-weight: 600;
+                    line-height: 150%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    width: 100%;
+                }
+                &:hover {
+                    border: 1px solid #D91722;
+                }
+                &.active {
+                    border: 1px solid #D91722;
+                }
+            }
+        }
+        .line {
+            background: linear-gradient(151deg, #595959 -0.07%, #F0EFEF 34.59%, #8F9299 63.53%, #FFF 99.93%);
+            width: 100%;
+            height: 1px;
+        }
+        .items {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.667vw;
+            display: none;
+            &.active {
+                display: grid;
+            }
+            .item {
+                border-radius: 8px;
+                overflow: hidden;
+                border: 1px solid #806e6e00;
+                background: rgba(255, 255, 255, 0);
+                transition: all .5s;
+                padding: 0.556vw;
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                }
+                .name {
+                    width: 100%;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 150%;
+                    margin-bottom: 2.083vw;
+                }
+                &:hover {
+                    border: 1px solid #595959;
+                    background: rgba(255, 255, 255, 0.10);
+                }
+            }
+        }
+    }
+}

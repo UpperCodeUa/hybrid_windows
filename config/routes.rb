@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /(#{I18n.available_locales.map(&:to_s).join('|')})/ do
     root "home#index"
 
+    get "catalog",       to: "home#catalog"
+    get "calculator",    to: "home#calculator"
+    get "contacts",      to: "home#contacts"
+    get "products",      to: "home#products"
+    get "product-page",  to: "home#product_page"
+
     devise_for :users
   end
 

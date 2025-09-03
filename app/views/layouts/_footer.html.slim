@@ -1,1 +1,37 @@
-h2 footer
+footer.footer
+    .container
+        .footer-wrapper
+            .box.logo-box
+                = link_to root_path, class: 'logo' do
+                    = image_tag "icons/logo.png", alt: 'logo', title: 'logo', class: 'logo'
+                .media-box
+                    a.media-link href="#"
+                        = image_tag  "icons/instagram.svg", title: 'icon', alt: 'icon'
+                    a.media-link href="#"
+                        = image_tag  "icons/facebook.svg", title: 'icon', alt: 'icon', class: 'facebook'
+            .box.line-box
+                .line
+                .title Контакти
+                a.link href="tel:380979877272"
+                    = image_tag "icons/phone.svg", title: 'icon', alt: 'icon', class: 'icon'
+                    p +38-097-987-72-72
+                a.link href="mailto:hybridwindows@gmail.com"
+                    = image_tag "icons/email.svg", title: 'icon', alt: 'icon', class: 'icon'
+                    p hybridwindows@gmail.com
+                a.link href="tel:380979877272"
+                    = image_tag "icons/location.svg", title: 'icon', alt: 'icon', class: 'icon'
+                    p 8 Zlitna St., Sokilnyki, 81130, Lviv, Ukraine
+            .box.line-box
+                .line
+                .title Сторінки
+                = link_to "Продукти",            products_path, class: 'link'
+                = link_to "Каталог",             catalog_path, class: 'link'
+                = link_to "Калькулятор",         calculator_path, class: 'link'
+                = link_to "Контакти",            contacts_path, class: 'link'
+            .box.line-box
+                .line
+                .title Продукти
+                = link_to "Вікна",               "/products#windows", class: 'link'
+                = link_to "Двері",               "/products#door", class: 'link'
+                = link_to "Розсувні системи",    "/products#sliding_systems", class: 'link'
+                = link_to "Жалюзі у склопакеті", "/products#blinds", class: 'link'

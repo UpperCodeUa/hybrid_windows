@@ -1,1 +1,58 @@
-h1 Home page
+section.section.first-screen
+    .container
+        .first-screen-wrapper
+            .inner-box
+                .top
+                    .title HYBRID WINDOWS
+                    .subtitle НОВА ЕРА У СВІТІ ВІКОННИХ КОНСТРУКЦІЙ
+                a.button href="#" Залишити заявку
+
+section.section.catalog-section
+    .container
+        .h2 Каталог
+    .inner-box
+        = link_to "/products#windows", class: 'box' do
+            = image_tag "home/image2.jpg", alt: 'image', title: 'image'
+            .title ВІКНА
+        = link_to "/products#door", class: 'box' do
+            = image_tag "home/image3.jpg", alt: 'image', title: 'image'
+            .title ДВЕРІ
+        = link_to "/products#sliding_systems", class: 'box' do
+            = image_tag "home/image4.jpg", alt: 'image', title: 'image'
+            .title РОЗСУВНІ СИСТЕМИ
+        = link_to "/products#blinds", class: 'box' do
+            = image_tag "home/image5.jpg", alt: 'image', title: 'image'
+            .title ЖАЛЮЗІ ВСЕРЕДИНІ СКОПАКЕТУ
+
+section.section.about-us-section
+    .container
+        .h2 Про нас
+    .about-us-section-wrapper
+        .video-box
+            = image_tag  "home/play.png", title: 'image', alt: 'image', class: 'play'
+            = image_tag  "home/image6.jpg", title: 'image', alt: 'image'
+        .content-box
+            p Ми створюємо вікна, які поєднують найкраще — довершений дизайн і довговічність алюмінієвих вікон та найвищі показники теплоізоляції ПВХ вікон.
+            p Власне виробництво дозволяє задовільнити будь-яку вимогу наших клієнтів, забезпечуючи при цьому бездоганну якість продукту.
+
+section.section.project-section
+    .container
+        .title-box
+            .h2 Реалізовані проекти
+            .buttons
+                .prev-slide
+                .next-slide
+    .project-slider-wrapper
+        .swiper.project-slider
+            .swiper-wrapper
+                .swiper-slide
+                    = image_tag "home/slider1.jpg", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider2.png", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider1.jpg", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider2.png", alt: 'image', title: 'image'
+            .swiper-pagination
+
+= render "contact_us"

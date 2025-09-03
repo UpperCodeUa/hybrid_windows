@@ -20,9 +20,10 @@ html
     = javascript_importmap_tags
     = favicon_link_tag 'favicon.png'
 
-  body
+  body data-controller="header"
     #flash
       = render 'layouts/flash'
     = render 'layouts/header'
-    = yield
+    .page-content
+      = yield
     = render 'layouts/footer'

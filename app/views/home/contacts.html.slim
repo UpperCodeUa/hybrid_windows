@@ -1,0 +1,36 @@
+section.page-section.contact-section
+    .container
+        .contact-section-box
+            .left
+                .h2-no-line Контакти
+                .bottom
+                    .box
+                        .title Телефон
+                        a.link href="tel:380979877272"
+                            = image_tag "contacts/phone.svg", alt: 'icon', title: 'icon'
+                            p +38-097-987-72-72
+                    .line
+                    .box
+                        .title Електрона пошта
+                        a.link href="mainto:hybridwindows@gmail.com"
+                            = image_tag "contacts/email.svg", alt: 'icon', title: 'icon'
+                            p hybridwindows@gmail.com
+                    .line
+                    .box
+                        .title Соціальні мережі
+                        .media-box
+                            a.media href="#"
+                                = image_tag "contacts/facebook.svg", alt: 'icon', title: 'icon', class: 'facebook'
+                            a.media href="#"
+                                = image_tag "contacts/inst.svg", alt: 'icon', title: 'icon'
+                    .line
+                    .box
+                        .title Адреса відділу продаж:
+                        a.link href="mainto:hybridwindows@gmail.com"
+                            = image_tag "contacts/location.svg", alt: 'icon', title: 'icon'
+                            p 8 Zlitna St., Sokilnyki, 81130, Lviv, Ukraine
+
+            .right
+                = image_tag "contacts/image1.jpg", alt: 'image', title: 'image'
+
+= render "contact_us"
