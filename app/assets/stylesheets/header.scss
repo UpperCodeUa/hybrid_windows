@@ -1,0 +1,39 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(14, 14, 14, 0.40);
+    z-index: 999;
+    width: 100%;
+    padding: 1.111vw 0;
+    transition: all .5s;
+    &.scroll {
+        background: rgba(0, 0, 0, 1);
+    }
+    .header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .box {
+            display: flex;
+            gap: 1.667vw;
+            align-items: center;
+            width: 27.778vw;
+            a {
+                color: #B1B5B8;
+                font-size: 0.972vw;
+                font-weight: 500;
+                line-height: 150%;
+            }
+            &.right {
+                justify-content: flex-end;
+            }
+        }
+        .logo {
+            display: block;
+            img {
+                width: 9.028vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Unbounded", sans-serif;
+    background: #0E0E0E;
+}
+
+.container {
+    max-width: 91.112%;
+    margin: 0 auto;
+}
+
+.page-content {
+    min-height: 100vh;
+}
+
+.section {
+    margin-bottom: 6.667vw;
+}
+
+.page-section {
+    padding: 7.778vw 0 6.667vw 0;
+}
+
+.h2 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 3.889vw;
+    font-weight: 500;
+    line-height: 110%;
+    background: linear-gradient(151deg, #595959 -0.07%, #F0EFEF 34.59%, #8F9299 63.53%, #FFF 99.93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    padding-bottom: 0.556vw;
+    position: relative;
+    &::before {
+        content: '';
+        width: 130%;
+        height: 0.139vw;
+        display: block;
+        background: linear-gradient(151deg, #595959 -0.07%, #F0EFEF 34.59%, #8F9299 63.53%, #FFF 99.93%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.h2-no-line {
+    font-family: "Unbounded", sans-serif;
+    font-size: 3.889vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    background: linear-gradient(151deg, #595959 -0.07%, #F0EFEF 34.59%, #8F9299 63.53%, #FFF 99.93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    text-align: center;
+}
+
+.subtitle {
+    color: #B1B5B8;
+    font-family: "Montserrat";
+    font-size: 1.111vw;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.556vw;
+    width: 100%;
+    label {
+        color: #FFF;
+        font-family: "Montserrat";
+        font-size: 1.111vw;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    input, textarea {
+        color: #1a1a1a;
+        font-family: "Montserrat";
+        font-size: 1.111vw;
+        font-weight: 500;
+        line-height: 150%;
+        transition: all .5s;
+        border-radius: 8px;
+        border: 1px solid #9FA3A6;
+        background: rgba(255, 255, 255, 0.90);
+        padding: 0.833vw;
+        &::placeholder {
+            color: #9FA3A6;
+        }
+        &:focus, &:active {
+            outline: 0;
+            border: 1px solid #595959;
+        }
+    }
+    textarea {
+        height: 10.856vw;
+    }
+}
+
+input.button-red, .button-red {
+    color: #FFF;
+    font-family: "Unbounded", sans-serif;
+    font-size: 1.111vw;
+    font-weight: 500;
+    line-height: 140%;
+    border-radius: 8px;
+    background: #D91722;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.333vw;
+    width: 21.528vw;
+    border: 0;
+}
+
+.top-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.556vw;
+}
+
+.center-form-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.667vw;
+    .inner-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1.667vw;
+        width: 100%;
+    }
+}
+
+.bottom-form-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

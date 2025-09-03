@@ -1,0 +1,78 @@
+.footer {
+    background: #1A1A1A;
+    padding: 2.778vw 0;
+    .footer-wrapper {
+        display: flex;
+        gap: 6.111vw;
+        .box {
+            display: flex;
+            flex-direction: column;
+            &.logo-box {
+                justify-content: space-between;
+                .logo {
+                    display: block;
+                    width: 13.472vw;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .media-box {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.556vw;
+                    .media-link {
+                        width: 2.222vw;
+                        height: 2.222vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: 1.667vw;
+                            height: 1.667vw;
+                        }
+                        .facebook {
+                            width: 2.222vw;
+                            height: 2.222vw;
+                        }
+                    }
+                }
+            }
+            &.line-box {
+                padding-left: 0.556vw;
+                position: relative;
+                gap: 0.556vw;
+                overflow: hidden;
+                height: fit-content;
+                .title {
+                    color: #FFF;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 1.111vw;
+                    font-weight: 600;
+                    line-height: 150%;
+                }
+                .link {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.556vw;
+                    color: #B1B5B8;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 0.972vw;
+                    font-weight: 500;
+                    line-height: 150%;
+                    img {
+                        width: 1.667vw;
+                        height: 1.667vw;
+                    }
+                }
+                .line {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: #E31E24;
+                    width: 1px;
+                    height: 20.833vw;
+                }
+            }
+        }
+    }
+}
