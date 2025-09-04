@@ -46,7 +46,7 @@ section.section.about-us-section
         .video-box data-controller="video"
             .play data-video-target="playButton"
                 = image_tag "home/play.png", title: 'image', alt: 'image', class: 'play'
-            = video_tag "home/fs-video-safari.mp4", loop: true, muted: true, playsinline: true, data: { "video-target": "video", action: "click->video#toggle" }
+            = video_tag "home/fs-video.mp4", loop: true, playsinline: true, data: { "video-target": "video", action: "click->video#toggle" }
         .content-box
             p Ми створюємо вікна, які поєднують найкраще — довершений дизайн і довговічність алюмінієвих вікон та найвищі показники теплоізоляції ПВХ вікон.
             p Власне виробництво дозволяє задовільнити будь-яку вимогу наших клієнтів, забезпечуючи при цьому бездоганну якість продукту.

@@ -5,16 +5,21 @@ export default class extends Controller {
 
   connect() {
     this.playButtonTarget.style.display = "block"
+
+    // коли відео закінчилося
+    this.videoTarget.addEventListener("ended", () => {
+      this.showPlayButton()
+    })
   }
 
   play() {
     this.videoTarget.play()
-    this.playButtonTarget.style.display = "none"
+    this.hidePlayButton()
   }
 
   pause() {
     this.videoTarget.pause()
-    this.playButtonTarget.style.display = "block"
+    this.showPlayButton()
   }
 
   toggle() {
@@ -23,5 +28,13 @@ export default class extends Controller {
     } else {
       this.pause()
     }
+  }
+
+  showPlayButton() {
+    this.playButtonTarget.style.display = "block"
+  }
+
+  hidePlayButton() {
+    this.playButtonTarget.style.display = "none"
   }
 }
