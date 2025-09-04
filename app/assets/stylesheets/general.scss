@@ -9,6 +9,16 @@ body {
 .container {
     max-width: 91.112%;
     margin: 0 auto;
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 24px;
+    }
+    @media (max-width: 600px) {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 16px;
+    }
 }
 
 .page-content {
@@ -17,10 +27,19 @@ body {
 
 .section {
     margin-bottom: 6.667vw;
+    @media (max-width: 1024px) {
+        margin-bottom: 96px;
+    }
 }
 
 .page-section {
     padding: 7.778vw 0 6.667vw 0;
+    @media (max-width: 1024px) {
+        padding: 112px 0 88px;
+    }
+    @media (max-width: 700px) {
+        padding: 88px 0 88px;
+    }
 }
 
 .h2 {
@@ -35,6 +54,13 @@ body {
     width: fit-content;
     padding-bottom: 0.556vw;
     position: relative;
+    @media (max-width: 1024px) {
+        font-size: 32px;
+        padding-bottom: 4px;
+    }
+    @media (max-width: 600px) {
+        font-size: 24px;
+    }
     &::before {
         content: '';
         width: 130%;
@@ -44,6 +70,9 @@ body {
         position: absolute;
         right: 0;
         bottom: 0;
+        @media (max-width: 1024px) {
+            height: 2px;
+        }
     }
 }
 
@@ -59,6 +88,12 @@ body {
     -webkit-text-fill-color: transparent;
     width: fit-content;
     text-align: center;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+    }
+    @media (max-width: 600px) {
+        font-size: 24px;
+    }
 }
 
 .subtitle {
@@ -67,6 +102,10 @@ body {
     font-size: 1.111vw;
     font-weight: 600;
     line-height: 150%;
+    text-align: center;
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
 }
 
 .input-box {
@@ -74,12 +113,18 @@ body {
     flex-direction: column;
     gap: 0.556vw;
     width: 100%;
+    @media (max-width: 1024px) {
+        gap: 8px;
+    }
     label {
         color: #FFF;
         font-family: "Montserrat";
         font-size: 1.111vw;
         font-weight: 500;
         line-height: 150%;
+        @media (max-width: 1024px) {
+            font-size: 16px;
+        }
     }
     input, textarea {
         color: #1a1a1a;
@@ -92,6 +137,10 @@ body {
         border: 1px solid #9FA3A6;
         background: rgba(255, 255, 255, 0.90);
         padding: 0.833vw;
+        @media (max-width: 1024px) {
+            font-size: 16px;
+            padding: 12px;
+        }
         &::placeholder {
             color: #9FA3A6;
         }
@@ -102,6 +151,9 @@ body {
     }
     textarea {
         height: 10.856vw;
+        @media (max-width: 1024px) {
+            height: 152px;
+        }
     }
 }
 
@@ -119,6 +171,16 @@ input.button-red, .button-red {
     height: 3.333vw;
     width: 21.528vw;
     border: 0;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+        background: #8E0B12;
+    }
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+    }
 }
 
 .top-form-box {
@@ -128,17 +190,27 @@ input.button-red, .button-red {
     align-items: center;
     width: 100%;
     gap: 0.556vw;
+    @media (max-width: 1024px) {
+        gap: 8px;
+    }
 }
 
 .center-form-box {
     display: flex;
     align-items: flex-start;
     gap: 1.667vw;
+    @media (max-width: 1024px) {
+        gap: 24px;
+        flex-direction: column;
+    }
     .inner-box {
         display: flex;
         flex-direction: column;
         gap: 1.667vw;
         width: 100%;
+        @media (max-width: 1024px) {
+            gap: 24px;
+        }
     }
 }
 
@@ -146,4 +218,121 @@ input.button-red, .button-red {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+// 404
+
+.error-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.222vw;
+    background-image: url(error/404.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media (max-width: 1024px) {
+        padding: 80px 24px;
+    }
+    @media (max-width: 600px) {
+        padding: 80px 16px;
+    }
+    .inner-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: rgba(1, 1, 1, 0.60);
+        padding: 3.333vw;
+        max-width: 67.847vw;
+        @media (max-width: 1024px) {
+            max-width: 1024px;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            padding: 16px;
+        }
+        .title {
+            font-family: "Unbounded";
+            font-size: 5.556vw;
+            font-weight: 600;
+            line-height: 110%;
+            background: linear-gradient(151deg, #595959 -0.07%, #F0EFEF 34.59%, #8F9299 63.53%, #FFF 99.93%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 1.111vw;
+            @media (max-width: 1024px) {
+                font-size: 56px;
+                margin-bottom: 16px;
+                font-weight: 500;
+            }
+            @media (max-width: 600px) {
+                font-size: 32px;
+                margin-bottom: 8px;
+            }
+        }
+        .subtitle {
+            text-align: center;
+            font-family: "Unbounded";
+            font-size: 3.889vw;
+            font-weight: 500;
+            line-height: 110%;
+            background: linear-gradient(151deg, #595959 -0.07%, #F0EFEF 34.59%, #8F9299 63.53%, #FFF 99.93%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 1.667vw;
+            @media (max-width: 1024px) {
+                font-size: 32px;
+                margin-bottom: 24px;
+            }
+            @media (max-width: 600px) {
+                font-size: 24px;
+            }
+        }
+        .text {
+            color: #B1B5B8;
+            text-align: center;
+            font-family: "Montserrat";
+            font-size: 1.389vw;
+            font-weight: 500;
+            line-height: 150%;
+            text-align: center;
+            margin-bottom: 3.889vw;
+            @media (max-width: 1024px) {
+                margin-bottom: 40px;
+                font-size: 20px;
+            }
+            @media (max-width: 600px) {
+                margin-bottom: 24px;
+            }
+        }
+        .link {
+            max-width: 30.069vw;
+            width: 100%;
+            height: 3.333vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            font-family: "Unbounded";
+            font-size: 1.111vw;
+            font-weight: 500;
+            line-height: 140%;
+            border-radius: 8px;
+            background: #D91722;
+            @media (max-width: 1024px) {
+                width: 100%;
+                max-width: 1024px;
+                height: 48px;
+                font-size: 16px;
+            }
+        }
+    }
 }

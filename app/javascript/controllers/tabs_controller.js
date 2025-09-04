@@ -16,7 +16,7 @@ export default class extends Controller {
     const button = event.currentTarget
     const name = button.dataset.button
     this.activateTab(name)
-    window.location.hash = name // міняє хеш в URL
+    window.location.hash = name
   }
 
   activateFromHash = () => {
@@ -27,12 +27,10 @@ export default class extends Controller {
   }
 
   activateTab(name) {
-    // кнопки
     this.buttonTargets.forEach(btn => {
       btn.classList.toggle("active", btn.dataset.button === name)
     })
 
-    // блоки
     this.boxTargets.forEach(box => {
       box.classList.toggle("active", box.dataset.box === name)
     })

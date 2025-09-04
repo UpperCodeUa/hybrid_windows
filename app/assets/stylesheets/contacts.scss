@@ -3,11 +3,20 @@
         display: flex;
         align-self: flex-start;
         gap: 1.667vw;
+        @media (max-width: 1024px) {
+            gap: 24px;
+            flex-direction: column;
+            align-items: center;
+        }
         .right {
             width: 52.431vw;
             height: 48.611vw;
             border-radius: 8px;
             overflow: hidden;
+            @media (max-width: 600px) {
+                width: 100%;
+                height: 73.611vw;
+            }
             img  {
                 width: 100%;
                 height: 100%;
@@ -19,10 +28,25 @@
             display: flex;
             flex-direction: column;
             gap: 1.667vw;
+            @media (max-width: 1024px) {
+                gap: 24px;
+                width: 100%;
+            }
+            .h2-no-line {
+                @media (max-width: 1024px) {
+                    font-size: 56px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 32px;
+                }
+            }
             .bottom {
                 display: flex;
                 flex-direction: column;
                 gap: 1.25vw;
+                @media (max-width: 1024px) {
+                    gap: 18px;
+                }
                 .line {
                     width: 100%;
                     height: 1px;
@@ -32,12 +56,21 @@
                     display: flex;
                     flex-direction: column;
                     gap: 1.111vw;
+                    @media (max-width: 1024px) {
+                        gap: 16px;
+                    }
                     .title {
                         color: #FFF;
                         font-family: "Montserrat";
                         font-size: 1.667vw;
                         font-weight: 600;
                         line-height: 150%;
+                        @media (max-width: 1024px) {
+                            font-size: 24px;
+                        }
+                        @media (max-width: 600px) {
+                            font-size: 16px;
+                        }
                     }
                     .link {
                         display: flex;
@@ -48,28 +81,60 @@
                         font-size: 1.111vw;
                         font-weight: 500;
                         line-height: 150%;
+                        transition: all .5s;
+                        &:hover {
+                            color: #e31e24;
+                        }
+                        @media (max-width: 1024px) {
+                            font-size: 16px;
+                            gap: 8px;
+                        }
                         img {
                             width: 1.667vw;
                             height: 1.667vw;
+                            @media (max-width: 1024px) {
+                                width: 24px;
+                                height: 24px;
+                            }
                         }
                     }
                     .media-box {
                         display: flex;
                         align-items: center;
                         gap: 0.556vw;
+                        @media (max-width: 1024px) {
+                            gap: 8px;
+                        }
                         .media {
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             width: 2.222vw;
                             height: 2.222vw;
+                            @media (max-width: 1024px) {
+                                width: 32px;
+                                height: 32px;
+                            }
+                            &:hover {
+                                img {
+                                    filter: brightness(0) saturate(100%) invert(100%) sepia(19%) saturate(0%) hue-rotate(173deg) brightness(115%) contrast(100%);
+                                }
+                            }
                             img {
                                 width: 1.667vw;
                                 height: 1.667vw;
+                                @media (max-width: 1024px) {
+                                    width: 24px;
+                                    height: 24px;
+                                }
                             }
                             .facebook {
                                 width: 2.222vw;
                                 height: 2.222vw;
+                                @media (max-width: 1024px) {
+                                    width: 32px;
+                                    height: 32px;
+                                }
                             }
                         }
                     }

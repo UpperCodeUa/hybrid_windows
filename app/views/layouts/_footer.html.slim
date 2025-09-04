@@ -24,10 +24,10 @@ footer.footer
             .box.line-box
                 .line
                 .title Сторінки
-                = link_to "Продукти",            products_path, class: 'link'
-                = link_to "Каталог",             catalog_path, class: 'link'
-                = link_to "Калькулятор",         calculator_path, class: 'link'
-                = link_to "Контакти",            contacts_path, class: 'link'
+                = link_to "Продукти", products_path, class: "link #{'active' if current_page?(products_path)}"
+                = link_to "Каталог", catalog_path, class: "link #{'active' if current_page?(catalog_path)}"
+                = link_to "Калькулятор", calculator_path, class: "link #{'active' if current_page?(calculator_path)}"
+                = link_to "Контакти", contacts_path, class: "link #{'active' if current_page?(contacts_path)}"
             .box.line-box
                 .line
                 .title Продукти

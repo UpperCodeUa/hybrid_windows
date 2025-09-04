@@ -3,26 +3,19 @@
         display: flex;
         flex-direction: column;
         gap: 2.222vw;
+        @media (max-width: 1024px) {
+            gap: 32px;
+        }
         .top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .download-button {
-                border-radius: 8px;
-                background: #D91722;
-                color: #FFF;
-                font-family: "Unbounded";
-                font-size: 1.111vw;
-                font-weight: 500;
-                line-height: 140%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.556vw;
-                padding: 0.833vw 1.667vw;
-                img {
-                    width: 1.667vw;
-                    height: 1.667vw;
+            .h2-no-line {
+                @media (max-width: 1024px) {
+                    font-size: 56px;
+                }
+                @media (max-width: 700px) {
+                    font-size: 32px;
                 }
             }
         }
@@ -36,11 +29,54 @@
             }
         }
     }
+    .download-button {
+        border-radius: 8px;
+        background: #D91722;
+        color: #FFF;
+        font-family: "Unbounded";
+        font-size: 1.111vw;
+        font-weight: 500;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.556vw;
+        padding: 0.833vw 1.667vw;
+        transition: all .5s;
+        &:hover {
+            background: #8E0B12;
+        }
+        @media (max-width: 1024px) {
+            font-size: 16px;
+            gap: 8px;
+            padding: 12px 24px;
+        }
+        img {
+            width: 1.667vw;
+            height: 1.667vw;
+            @media (max-width: 1024px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &.desk {
+            @media (max-width: 700px) {
+                display: none;
+            }
+        }
+        &.mob {
+            display: none;
+            @media (max-width: 700px) {
+                display: flex;
+                margin-top: -8px;
+            }
+        }
+    }
 }
 
 .section-calculator {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,34 +84,60 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @media (max-width: 1024px) {
+        padding: 88px 24px;
+    }
     .inner-box {
         display: flex;
         flex-direction: column;
         gap: 2.222vw;
         max-width: 67.917vw;
         width: 100%;
+        @media (max-width: 1024px) {
+            max-width: 800px;
+            gap: 24px;
+        }
         .bottom-form-box {
             margin-top: 1.111vw;
+        }
+        .h2-no-line {
+            @media (max-width: 1024px) {
+                font-size: 56px;
+            }
+            @media (max-width: 600px) {
+                font-size: 32px;
+            }
         }
     }
 }
 
 .product-section {
-    padding: 6.111vw 0;
-    height: 100vw;
+    padding: 6.111vw 0 0 0;
     width: 100%;
     background: rgba(14, 14, 14, 0.80);
     backdrop-filter: blur(3px);
+    @media (max-width: 1024px) {
+        padding: 88px 0 88px 0;
+    }
     .product-section-box {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 1.667vw;
+        @media (max-width: 1024px) {
+            gap: 24px;
+        }
         .tabs-box {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1.667vw;
+            @media (max-width: 1024px) {
+                gap: 16px;
+            }
+            @media (max-width: 700px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .tab-button {
                 width: 100%;
                 height: 8.333vw;
@@ -84,6 +146,13 @@
                 border: 1px solid #595959;
                 overflow: hidden;
                 transition: all .5s;
+                cursor: pointer;
+                @media (max-width: 1024px) {
+                    height: 86px;
+                }
+                @media (max-width: 700px) {
+                    height: 68px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -103,6 +172,12 @@
                     transform: translateY(-50%);
                     left: 0;
                     width: 100%;
+                    @media (max-width: 1024px) {
+                        font-size: 20px;
+                    }
+                    @media (max-width: 700px) {
+                        font-size: 16px;
+                    }
                 }
                 &:hover {
                     border: 1px solid #D91722;
@@ -121,6 +196,12 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 1.667vw;
             display: none;
+            @media (max-width: 1024px) {
+                gap: 16px;
+            }
+            @media (max-width: 700px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
             &.active {
                 display: grid;
             }
@@ -131,6 +212,9 @@
                 background: rgba(255, 255, 255, 0);
                 transition: all .5s;
                 padding: 0.556vw;
+                @media (max-width: 1024px) {
+                    padding: 8px;
+                }
                 img {
                     width: 100%;
                     aspect-ratio: 1/1;
@@ -140,10 +224,17 @@
                     color: #FFF;
                     text-align: center;
                     font-family: "Montserrat";
-                    font-size: 20px;
+                    font-size: 1.389vw;
                     font-weight: 500;
                     line-height: 150%;
                     margin-bottom: 2.083vw;
+                    @media (max-width: 1024px) {
+                        font-size: 14px;
+                    }
+                    @media (max-width: 700px) {
+                        font-family: "Unbounded";
+                        margin-bottom: 20px;
+                    }
                 }
                 &:hover {
                     border: 1px solid #595959;

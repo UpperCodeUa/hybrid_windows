@@ -24,8 +24,9 @@ section.section.product-fs
 section.section.model-section
     .container
         .h2 3Д модель
-    .model-box
-        = image_tag "product_page/3d/1.png", title: 'image', alt: 'image', class: 'image'
+    .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
+        - (1..35).each do |i|
+            = image_tag "product_page/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
 
 section.section.characteristics-section
     .container
@@ -102,5 +103,127 @@ section.section.comparison-section
             .top-box
                 .h2 Порівняння характеристик
                 .button-pin
+                    = image_tag "product_page/pin.svg"
+                    p Закріплення
+            .bottom-box
+                .fixed-box
+                    .cart.red
+                        .cart-top
+                            = image_tag "product_page/image2.png", alt: 'image', title: 'image'
+                            .name OptiTherm 76 Premium
+                        .cart-bottom
+                            .box
+                                .title Склопакет
+                                .value 2-камерний
+                            .box
+                                .title Гарантія
+                                .value 10 років
+                            .box
+                                .title Теплоізоляція
+                                .value 1,1 Вт/м²K
+                            .box
+                                .title Монтажна глибина
+                                .value 76 mm
+                            .box
+                                .title Звукоізоляція
+                                .value до 44 дБ
+                .pinned-box
+                .slider-box data-controller="pin-slider"
+                    .swiper data-pin-slider-target="container"
+                        .control-box
+                            .prev-slide
+                            .swiper-pagination
+                            .next-slide
+                        .swiper-wrapper
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 1
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 2
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 3
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 4
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+
+
 
 = render "contact_us"
