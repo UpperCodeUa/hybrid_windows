@@ -22,6 +22,7 @@ gem "carrierwave", "~> 3.1"
 gem "validate_url", "~> 1.0"
 gem "i18n", "~> 1.14"
 gem "rails-i18n", "~> 8.0"
+gem "telegram-bot-ruby"
 
 gem "solid_cache"
 gem "solid_cable"

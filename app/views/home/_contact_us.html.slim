@@ -1,19 +1,31 @@
 section.contact_us_section#form-anchor
-    .contact_us-box
+
+    = form_with model: @request, url: contacts_path, method: :post, local: true, class: 'contact_us-box' do |f|
         .top-form-box
             .h2-no-line Звʼяжіться з нами
             .subtitle Залиште номер телефону і наш менеджер зв'яжеться з вами.
         .center-form-box
             .inner-box
                 .input-box
-                    label Ваше імʼя
-                    input type="text" placeholder="Андрій"
+                    = f.label :name, "Ваше імʼя"
+                    = f.text_field :name, placeholder: "Ім'я", required: true
                 .input-box
-                    label Ваш номер телефону
-                    input type="text" placeholder="+38 099 202 23 88"
+                    = f.label :phone, "Ваш номер телефону"
+                    = f.telephone_field :phone,
+                            placeholder: "Номер телефону",
+                            pattern: '\+?[0-9]{10,13}',
+                            inputmode: "numeric",
+                            required: true
             .input-box
-                label Повідомлення
-                textarea placeholder="Ваше повідомлення"
+                = f.label :message, "Повідомлення"
+                = f.text_area :message,
+                        placeholder: "Ваше повідомлення",
+                        maxlength: 500,
+                        required: true
+
         .bottom-form-box
-            input.button-red type="submit" value="Замовити дзвінок"
+            .h-captcha data-sitekey="56361746-cce6-4f12-87a6-2866114c3522"
+
+        .bottom-form-box
+            = f.submit "Замовити дзвінок", class: "button-red"
 

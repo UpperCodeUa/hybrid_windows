@@ -18,6 +18,7 @@ html
     = stylesheet_link_tag 'application', "data-turbo-track": "reload"
     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/swiper@11.2.2/swiper-bundle.min.css', "data-turbo-track": "reload"
     = javascript_importmap_tags
+    = javascript_include_tag "https://js.hcaptcha.com/1/api.js", async: true, defer: true
     = favicon_link_tag 'favicon.png'
 
   body data-controller="header"
