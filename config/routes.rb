@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get "catalog",       to: "home#catalog"
     get "calculator",    to: "home#calculator"
     get "contacts",      to: "home#contacts"
+    post "/contacts",    to: "home#create_request"
     get "products",      to: "home#products"
     get "product-page",  to: "home#product_page"
 
