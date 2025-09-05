@@ -38,7 +38,7 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 group :development, :test do
   # gem "annotate", "~> 3.2", ">= 3.2.0"
   gem "brakeman", require: false
-  gem "faker", "~> 3.2", ">= 3.2.3"
+  gem "faker", "~> 3.5"
   gem "fasterer", "~> 0.11"
   gem "fuubar", "~> 2.5", ">= 2.5.1"
   gem "letter_opener_web", "~> 3.0"
