@@ -1,3 +1,5 @@
 uk:
   confirmation:
     are_you_sure: "Ви впевнені?"
+    fail_request: "Не вдалося зберегти запит. Перевірте введені дані."
+    success_request: "Ваш запит успішно надіслано!"
