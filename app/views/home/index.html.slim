@@ -39,6 +39,34 @@ section.section.catalog-section
             .swiper-pagination
             .next-slide-catalog
 
+section.section.philosophy-section
+    .container
+        .h2 Філософія Hybrid Windows
+    .container
+        .philosophy-section-wrapper
+            .video-box
+                .swiper.iframes-slider
+                    .swiper-wrapper
+                        .swiper-slide
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/W01ZXHii260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        .swiper-slide
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/W01ZXHii260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    .box
+                        .prev-slide-iframes
+                        .swiper-pagination
+                        .next-slide-iframes
+            .content-wrapper
+                .box
+                    .text <span>Hybrid Windows</span> — це інноваційна віконна система нового покоління, яка поєднує найкращі властивості алюмінієвих та ПВХ конструкцій в одному продукті.
+                    .text Завдяки цьому ми отримуємо <span>ДОВГОВІЧНІСТЬ 35 РОКІВ</span> та найвищу економію витрат при опаленні та кондиціонуванні приміщень за рахунок показників: Uf=1.1, SI+ до 45 дБ та третьому контуру ущільнення.
+                    .items-box
+                        p <span>Зовнішня частина з алюмінію</span> — забезпечує преміальний дизайн, міцність та довговічність
+                        p <span>Внутрішня частина з ПВХ</span> — гарантує найвищі показники тепло- та звукоізоляції
+                        p <span>Інтеграція двох матеріалів</span> у одній конструкції створює еталон віконної індустрії
+                    .text Продукт розроблений з сертифікованих європейських матеріалів, представлений у чотирьох архітектурних стилях і орієнтований на преміум-сегмент будівництва.
+                    .text За рахунок алюмінієвої складової, Ваш будинок зберігатиме вражаючий зовнішній вигляд на десятиліття вперед.Це також підвищує ліквідність та ринкову вартість Вашого об'єкту.
+                    .text Унікальна палітра кольорів, всі кольори по ралу, зовнішня та внутрішня ламінація 100+ кольорів і всі в одну ціну
+
 section.section.about-us-section
     .container
         .h2 Про нас
@@ -64,11 +92,19 @@ section.section.project-section
                 .swiper-slide
                     = image_tag "home/slider1.jpg", alt: 'image', title: 'image'
                 .swiper-slide
-                    = image_tag "home/slider2.png", alt: 'image', title: 'image'
+                    = image_tag "home/slider2.jpg", alt: 'image', title: 'image'
                 .swiper-slide
-                    = image_tag "home/slider1.jpg", alt: 'image', title: 'image'
+                    = image_tag "home/slider3.jpg", alt: 'image', title: 'image'
                 .swiper-slide
-                    = image_tag "home/slider2.png", alt: 'image', title: 'image'
+                    = image_tag "home/slider4.jpg", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider5.jpg", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider6.jpg", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider7.jpg", alt: 'image', title: 'image'
+                .swiper-slide
+                    = image_tag "home/slider8.jpg", alt: 'image', title: 'image'
             .swiper-pagination
 
 = render "contact_us"

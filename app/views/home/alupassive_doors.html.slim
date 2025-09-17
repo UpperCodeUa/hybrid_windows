@@ -3,7 +3,7 @@ section.section.product-fs
         .first-screen-wrapper
             .inner-box
                 .top
-                    .title OPTITHERM 76 PREMIUM
+                    .title AluPassive Doors
                 .bottom
                     .item
                         .title Склопакет
@@ -13,7 +13,7 @@ section.section.product-fs
                         .value 10 років
                     .item
                         .title Теплоізоляція
-                        .value 1,1 Вт/м²K
+                        .value 1.4 Вт/м²K
                     .item
                         .title Монтажна глибина
                         .value 76 mm
@@ -26,12 +26,22 @@ section.section.model-section
         .h2 3Д модель
     .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
         - (1..35).each do |i|
-            = image_tag "product_page/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
+            = image_tag "product_page/AluPassive/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
 
 section.section.characteristics-section
     .container
         .characteristics-wrapper
             .h2 Характеристики
+            .text-box
+                p AluPatio — інноваційна розсувна система від HYBRID WINDOWS, яка поєднує в собі естетику та довговічність алюмінію та енергоефективність ПВХ.
+                p Завдяки можливості фарбування за палітрою RAL, ви отримаєте абсолютну відповідність кольору між AluPatio та іншими алюмінієвими системами — для бездоганного архітектурного стилю.
+                p Основна перевага — вражаючі розміри: 2600 × 6500 мм, що відкривають нові можливості для простору та світла.
+                p Це — більш тепле, економічне та візуально неперевершене рішення, ніж ПВХ та алюмінієві системи.
+                p AluPassive Doors – новий рівень інженерної досконалості від "HYBRID WINDOWS".
+                p Ці двері – ідеальне доповнення до наших вікон "AluPassive": гармонійний, повторений дизайн створює цілісний архітектурний образ.
+                p Фігурна стулка в рівень з рамою, формує візуально чисту й сучасну геометрію.
+                p А завдяки збільшеній монтажній ширині стулки, AluPassive Doors дарують відчуття масивності та надійності, яке неможливо не помітити.
+                p Преміальність, яку видно. Надійність, яку відчуваєш.
             .characteristics-box
                 .title-box
                     .title Параметри
@@ -63,7 +73,7 @@ section.section.characteristics-section
                     .line
                     .item
                         p Коефіцієнт теплопровідності (Uf)
-                        p Від 1,0 до 1,3 Вт/м²K
+                        p 1,4 Вт/м²K
                     .line
                     .item
                         p Коефіцієнт теплопередачі (Uw)
@@ -82,20 +92,8 @@ section.section.characteristics-section
                         p Антизламність, обмежувач відкривання, дитячий замок
                     .line
                     .item
-                        p Колір профілю
-                        p Білий
-                    .line
-                    .item
-                        p Тип відкривання
-                        p Поворотне / відкидне
-                    .line
-                    .item
                         p Гарантія
                         p 10 років
-                    .line
-                    .item
-                        p Додаткові опції
-                        p Жалюзі в склопакеті, сумісність зі "смарт-домом"
 
 section.section.comparison-section
     .container
@@ -109,8 +107,8 @@ section.section.comparison-section
                 .fixed-box
                     .cart.red
                         .cart-top
-                            = image_tag "product_page/image2.png", alt: 'image', title: 'image'
-                            .name OptiTherm 76 Premium
+                            = image_tag "product_page/AluPassive/3d/1.png", alt: 'image', title: 'image'
+                            .name AluPassive Doors
                         .cart-bottom
                             .box
                                 .title Склопакет
@@ -120,7 +118,7 @@ section.section.comparison-section
                                 .value 10 років
                             .box
                                 .title Теплоізоляція
-                                .value 1,1 Вт/м²K
+                                .value 0,7 Вт/м²K
                             .box
                                 .title Монтажна глибина
                                 .value 76 mm
@@ -139,8 +137,8 @@ section.section.comparison-section
                                 .cart
                                     .pin
                                     .cart-top
-                                        = image_tag "product_page/AluPassive/3d/1.png", alt: 'image', title: 'image'
-                                        .name AluPassive Doors
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 1
                                     .cart-bottom
                                         .box
                                             .title Склопакет
@@ -150,7 +148,7 @@ section.section.comparison-section
                                             .value 10 років
                                         .box
                                             .title Теплоізоляція
-                                            .value 1,4 Вт/м²K
+                                            .value 1,1 Вт/м²K
                                         .box
                                             .title Монтажна глибина
                                             .value 76 mm
@@ -223,7 +221,5 @@ section.section.comparison-section
                                         .box
                                             .title Звукоізоляція
                                             .value до 44 дБ
-
-
 
 = render "contact_us"

@@ -53,6 +53,21 @@ export default class extends Controller {
         prevEl: ".prev-slide-catalog",
       },
     });
+
+    const swiper3 = new Swiper(".iframes-slider", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+
+      navigation: {
+        nextEl: ".next-slide-iframes",
+        prevEl: ".prev-slide-iframes",
+      },
+    });
   }
 
   disconnect() {
