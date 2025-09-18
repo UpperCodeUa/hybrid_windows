@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     padding: 3.333vw 0;
+    &.blinds {
+        background-image: url(product_page/blinds/image1.jpg);
+    }
     .inner-box {
         border-radius: 12px;
         background: rgba(1, 1, 1, 0.60);
@@ -56,6 +59,19 @@
             }
             @media (max-width: 800px) {
                 flex-direction: column;
+            }
+            .subtitle {
+                font-size: 2.889vw;
+                font-weight: 500;
+                line-height: 110%;
+                color: #fff;
+                text-align: center;
+                @media (max-width: 1024px) {
+                    font-size: 24px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 18px;
+                }
             }
             .item {
                 display: flex;
@@ -239,6 +255,15 @@
                 gap: 0.833vw;
                 @media (max-width: 1024px) {
                     gap: 12px;
+                }
+                &.all-width {
+                    .item {
+                        p {
+                            &:nth-child(1) {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
                 .line {
                     width: 100%;
@@ -561,6 +586,54 @@
                                 font-size: 16px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.types-section {
+    .container {
+        width: 100%;
+        .types-section-wrapper {
+            display: flex;
+            gap: 2.222vw;
+            margin-top: 1.667vw;
+            @media (max-width: 1024px) {
+                margin-top: 32px;
+                gap: 16px;
+            }
+            @media (max-width: 500px) {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 1.111vw;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                @media (max-width: 1024px) {
+                    gap: 16px;
+                }
+                img {
+                    width: 100%;
+                    aspect-ratio: 889/608;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+                .name {
+                    color: #bdbdbd;
+                    font-size: 1.667vw;
+                    font-weight: 600;
+                    line-height: 150%;
+                    @media (max-width: 1024px) {
+                        font-size: 20px;
+                    }
+                    @media (max-width: 500px) {
+                        font-size: 16px;
                     }
                 }
             }

@@ -11,23 +11,23 @@ section.product-section data-controller="tabs"
                 .tab-button data-tabs-target="button" data-button="sliding_systems" data-action="click->tabs#change"
                     = image_tag "products/img3.jpg", alt: 'image', title: 'image'
                     p.name РОЗСУВНІ СИСТЕМИ
-                .tab-button data-tabs-target="button" data-button="blinds" data-action="click->tabs#change"
+                a.tab-button href="/blinds" data-tabs-target="button" data-button="blinds" data-action="click->tabs#change"
                     = image_tag "products/img4.jpg", alt: 'image', title: 'image'
                     p.name ЖАЛЮЗІ У СКЛОПАКЕТІ
             .line
             .items.active data-tabs-target="box" data-box="windows"
+                a.item href="/alue-passive"
+                    = image_tag "product_page/AluPassiveWin/3d/1.png", alt: 'image', title: 'image'
+                    .name H8 AluPassive HI+/SI+
                 a.item href="/product-page"
                     = image_tag "products/img5.png", alt: 'image', title: 'image'
-                    .name ВІКНА P8 PASSIVE
+                    .name H8 AluStyle HI+/SI+
                 a.item href="/product-page"
                     = image_tag "products/img5.png", alt: 'image', title: 'image'
-                    .name ВІКНА P8 PASSIVE
+                    .name H8 AluGlass HI+/SI+
                 a.item href="/product-page"
                     = image_tag "products/img5.png", alt: 'image', title: 'image'
-                    .name ВІКНА P8 PASSIVE
-                a.item href="/product-page"
-                    = image_tag "products/img5.png", alt: 'image', title: 'image'
-                    .name ВІКНА P8 PASSIVE
+                    .name H8 Glass HI+/SI+
             .items data-tabs-target="box" data-box="door"
                 a.item href="/product-page"
                     = image_tag "products/img5.png", alt: 'image', title: 'image'

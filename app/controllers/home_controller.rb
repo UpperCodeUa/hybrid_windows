@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :build_request, only: %i[index contacts product_page alupassive_doors]
+  before_action :build_request, only: %i[index contacts product_page alupassive_doors alue_passive blinds]
 
   def index; end
   def catalog; end
@@ -8,6 +8,8 @@ class HomeController < ApplicationController
   def products; end
   def product_page; end
   def alupassive_doors; end
+  def alue_passive; end
+  def blinds; end
 
   def create_request
     unless verify_hcaptcha(params["g-recaptcha-response"])

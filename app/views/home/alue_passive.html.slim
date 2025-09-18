@@ -3,7 +3,7 @@ section.section.product-fs
         .first-screen-wrapper
             .inner-box
                 .top
-                    .title OPTITHERM 76 PREMIUM
+                    .title H8 AluPassive HI+/SI+
                 .bottom
                     .item
                         .title Склопакет
@@ -13,7 +13,7 @@ section.section.product-fs
                         .value 10 років
                     .item
                         .title Теплоізоляція
-                        .value 1,1 Вт/м²K
+                        .value 1,2 Вт/м²K
                     .item
                         .title Монтажна глибина
                         .value 76 mm
@@ -26,12 +26,14 @@ section.section.model-section
         .h2 3Д модель
     .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
         - (1..35).each do |i|
-            = image_tag "product_page/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
+            = image_tag "product_page/AluPassiveWin/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
 
 section.section.characteristics-section
     .container
         .characteristics-wrapper
             .h2 Характеристики
+            .text-box
+                p AluPassive - Дизайн повністю відтворює стиль алюмінієвих вікон у поєднанні з термоефективною ПВХ-серцевиною. Масивна стулка у рівень з рамою демонструє надійність, яку неможливо не помітити.
             .characteristics-box
                 .title-box
                     .title Параметри
@@ -39,7 +41,7 @@ section.section.characteristics-section
                 .inner-wrapper
                     .item
                         p Тип профілю
-                        p ПВХ, 5–7 камер, монтажна глибина 70–82 мм
+                        p ПВХ, 5–7 камер, монтажна глибина 76 мм
                     .line
                     .item
                         p Клас профілю
@@ -51,11 +53,11 @@ section.section.characteristics-section
                     .line
                     .item
                         p Тип склопакету
-                        p Двокамерний (3 скла), енергозберігаючий Low-E
+                        p Двокамерний (3 скла), надвисока термоізоляція
                     .line
                     .item
                         p Товщина склопакету
-                        p 24–44 мм
+                        p 48 мм
                     .line
                     .item
                         p Газонаповнення
@@ -63,7 +65,7 @@ section.section.characteristics-section
                     .line
                     .item
                         p Коефіцієнт теплопровідності (Uf)
-                        p Від 1,0 до 1,3 Вт/м²K
+                        p Від 0,9 до 1,2 Вт/м²K
                     .line
                     .item
                         p Коефіцієнт теплопередачі (Uw)
@@ -71,7 +73,7 @@ section.section.characteristics-section
                     .line
                     .item
                         p Звукоізоляція
-                        p До 44 дБ
+                        p До 44 дБ, надвисока звукоізоляція
                     .line
                     .item
                         p Фурнітура
@@ -80,15 +82,6 @@ section.section.characteristics-section
                     .item
                         p Функції фурнітури
                         p Антизламність, обмежувач відкривання, дитячий замок
-                    .line
-                    .item
-                        p Колір профілю
-                        p Білий
-                    .line
-                    .item
-                        p Тип відкривання
-                        p Поворотне / відкидне
-                    .line
                     .item
                         p Гарантія
                         p 10 років
@@ -109,8 +102,8 @@ section.section.comparison-section
                 .fixed-box
                     .cart.red
                         .cart-top
-                            = image_tag "product_page/image2.png", alt: 'image', title: 'image'
-                            .name OptiTherm 76 Premium
+                            = image_tag "product_page/AluPassiveWin/3d/1.png", alt: 'image', title: 'image'
+                            .name H8 AluPassive HI+/SI+
                         .cart-bottom
                             .box
                                 .title Склопакет
@@ -120,7 +113,7 @@ section.section.comparison-section
                                 .value 10 років
                             .box
                                 .title Теплоізоляція
-                                .value 1,1 Вт/м²K
+                                .value 1,2 Вт/м²K
                             .box
                                 .title Монтажна глибина
                                 .value 76 mm
@@ -161,8 +154,8 @@ section.section.comparison-section
                                 .cart
                                     .pin
                                     .cart-top
-                                        = image_tag "product_page/AluPassiveWin/3d/1.png", alt: 'image', title: 'image'
-                                        .name H8 AluPassive HI+/SI+
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 2
                                     .cart-bottom
                                         .box
                                             .title Склопакет
@@ -172,7 +165,7 @@ section.section.comparison-section
                                             .value 10 років
                                         .box
                                             .title Теплоізоляція
-                                            .value 1,2 Вт/м²K
+                                            .value 1,1 Вт/м²K
                                         .box
                                             .title Монтажна глибина
                                             .value 76 mm
