@@ -5,10 +5,10 @@ section.product-section data-controller="tabs"
                 .tab-button.active data-tabs-target="button" data-button="windows" data-action="click->tabs#change"
                     = image_tag "products/img1.jpg", alt: 'image', title: 'image'
                     p.name ВІКНА
-                .tab-button data-tabs-target="button" data-button="door" data-action="click->tabs#change"
+                a.tab-button href="/alu-passive-doors" data-tabs-target="button" data-button="door" data-action="click->tabs#change"
                     = image_tag "products/img2.jpg", alt: 'image', title: 'image'
                     p.name ДВЕРІ
-                .tab-button data-tabs-target="button" data-button="sliding_systems" data-action="click->tabs#change"
+                a.tab-button href="/alu-patio" data-tabs-target="button" data-button="sliding_systems" data-action="click->tabs#change"
                     = image_tag "products/img3.jpg", alt: 'image', title: 'image'
                     p.name РОЗСУВНІ СИСТЕМИ
                 a.tab-button href="/blinds" data-tabs-target="button" data-button="blinds" data-action="click->tabs#change"

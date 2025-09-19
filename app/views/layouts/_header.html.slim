@@ -8,7 +8,7 @@ header.header data-header-target="header"
             = link_to root_path, class: "logo" do
                 = image_tag  "icons/logo.png", class: 'logo', alt: 'logo', title: 'logo'
             .box.right
-                = link_to "+38-097-987-72-72", "tel:380979877272"
+                = link_to "0 (63) 230 86 65", "tel:0632308665"
                 = link_to "Контакти", contacts_path, class: "#{'active' if current_page?(contacts_path)}"
             .menu-button data-header-target="menuButton" data-action="click->header#toggleMenu"
                 .line
@@ -19,6 +19,6 @@ header.header data-header-target="header"
     = link_to "Каталог",     catalog_path, class: "#{'active' if current_page?(catalog_path)}"
     = link_to "Калькулятор", calculator_path, class: "#{'active' if current_page?(calculator_path)}"
     = link_to "Контакти",    contacts_path, class: "#{'active' if current_page?(contacts_path)}"
-    = link_to "+38-097-987-72-72", "tel:380979877272"
+    = link_to "0 (63) 230 86 65", "tel:0632308665"
 
 

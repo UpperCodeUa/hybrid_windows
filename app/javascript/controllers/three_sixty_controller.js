@@ -26,7 +26,7 @@ export default class extends Controller {
     this.autoRotateInterval = setInterval(() => {
       this.currentFrame = (this.currentFrame + 1) % this.totalFrames
       this.showFrame(this.currentFrame)
-    }, 1000)
+    }, 100000)
   }
 
   stopAutoRotate() {

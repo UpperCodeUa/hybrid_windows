@@ -24,9 +24,9 @@ section.section.product-fs
 section.section.model-section
     .container
         .h2 3Д модель
-    .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
+    .model-box.black-image data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
         - (1..35).each do |i|
-            = image_tag "product_page/AluPassiveWin/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
+            = image_tag "product_page/AluStyleWin/3d/#{i}.jpg", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
 
 section.section.characteristics-section
     .container
