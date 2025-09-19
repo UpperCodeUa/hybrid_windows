@@ -3,7 +3,7 @@ section.section.product-fs
         .first-screen-wrapper
             .inner-box
                 .top
-                    .title AluPassive Doors
+                    .title AluPatio
                 .bottom
                     .item
                         .title Склопакет
@@ -23,10 +23,9 @@ section.section.product-fs
 
 section.section.model-section
     .container
-        .h2 3Д модель
-    .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
-        - (1..35).each do |i|
-            = image_tag "product_page/AluPassive/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
+        .h2 Модель
+    .model-box
+        = image_tag "product_page/AluPatio/1.png", title: 'image', alt: "image", class: 'image'
 
 section.section.characteristics-section
     .container
@@ -37,11 +36,6 @@ section.section.characteristics-section
                 p Завдяки можливості фарбування за палітрою RAL, ви отримаєте абсолютну відповідність кольору між AluPatio та іншими алюмінієвими системами — для бездоганного архітектурного стилю.
                 p Основна перевага — вражаючі розміри: 2600 × 6500 мм, що відкривають нові можливості для простору та світла.
                 p Це — більш тепле, економічне та візуально неперевершене рішення, ніж ПВХ та алюмінієві системи.
-                p AluPassive Doors – новий рівень інженерної досконалості від "HYBRID WINDOWS".
-                p Ці двері – ідеальне доповнення до наших вікон "AluPassive": гармонійний, повторений дизайн створює цілісний архітектурний образ.
-                p Фігурна стулка в рівень з рамою, формує візуально чисту й сучасну геометрію.
-                p А завдяки збільшеній монтажній ширині стулки, AluPassive Doors дарують відчуття масивності та надійності, яке неможливо не помітити.
-                p Преміальність, яку видно. Надійність, яку відчуваєш.
             .characteristics-box
                 .title-box
                     .title Параметри
@@ -95,7 +89,7 @@ section.section.characteristics-section
                         p Гарантія
                         p 10 років
 
-section.section.comparison-section
+/ section.section.comparison-section
     .container
         .comparison-section-wrapper
             .top-box
@@ -107,8 +101,8 @@ section.section.comparison-section
                 .fixed-box
                     .cart.red
                         .cart-top
-                            = image_tag "product_page/AluPassive/3d/1.png", alt: 'image', title: 'image'
-                            .name AluPassive Doors
+                            = image_tag "product_page/AluPatio/3d/1.png", alt: 'image', title: 'image'
+                            .name AluPatio
                         .cart-bottom
                             .box
                                 .title Склопакет

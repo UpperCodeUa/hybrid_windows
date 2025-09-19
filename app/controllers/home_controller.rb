@@ -7,12 +7,13 @@ class HomeController < ApplicationController
   def contacts; end
   def products; end
   def product_page; end
-  def alupassive_doors; end
+  def alu_patio; end
   def alue_passive; end
   def glass; end
   def alu_style; end
   def alu_glass; end
   def blinds; end
+  def alu_passive_doors; end
 
   def create_request
     unless verify_hcaptcha(params["g-recaptcha-response"])

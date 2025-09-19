@@ -8,12 +8,13 @@ Rails.application.routes.draw do
     post "/contacts",        to: "home#create_request"
     get "products",          to: "home#products"
     get "product-page",      to: "home#product_page"
-    get "alupassive-doors",  to: "home#alupassive_doors"
+    get "alu-patio",         to: "home#alu_patio"
     get "alue-passive",      to: "home#alue_passive"
     get "alu-style",         to: "home#alu_style"
     get "alu-glass",         to: "home#alu_glass"
     get "glass",             to: "home#glass"
     get "blinds",            to: "home#blinds"
+    get "alu-passive-doors", to: "home#alu_passive_doors"
 
     devise_for :users
   end

@@ -1,0 +1,221 @@
+section.section.product-fs
+    .container
+        .first-screen-wrapper
+            .inner-box
+                .top
+                    .title AluPassive Doors
+                .bottom
+                    .item
+                        .title Склопакет
+                        .value 2-камерний
+                    .item
+                        .title Гарантія
+                        .value 10 років
+                    .item
+                        .title Теплоізоляція
+                        .value 1.4 Вт/м²K
+                    .item
+                        .title Монтажна глибина
+                        .value 76 mm
+                    .item
+                        .title Звукоізоляція
+                        .value до 44 дБ
+
+section.section.model-section
+    .container
+        .h2 3Д модель
+    .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
+        - (1..35).each do |i|
+            = image_tag "product_page/AluPatio/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
+
+section.section.characteristics-section
+    .container
+        .characteristics-wrapper
+            .h2 Характеристики
+            .text-box
+                p AluPassive Doors – новий рівень інженерної досконалості від "HYBRID WINDOWS".
+                p Ці двері – ідеальне доповнення до наших вікон "AluPassive": гармонійний, повторений дизайн створює цілісний архітектурний образ.
+                p Фігурна стулка в рівень з рамою, формує візуально чисту й сучасну геометрію.
+                p А завдяки збільшеній монтажній ширині стулки, AluPassive Doors дарують відчуття масивності та надійності, яке неможливо не помітити.
+                p Преміальність, яку видно. Надійність, яку відчуваєш.
+            .characteristics-box
+                .title-box
+                    .title Параметри
+                    .title Значення
+                .inner-wrapper
+                    .item
+                        p Тип профілю
+                        p ПВХ, 5–7 камер, монтажна глибина 70–82 мм
+                    .line
+                    .item
+                        p Клас профілю
+                        p Клас A
+                    .line
+                    .item
+                        p Армування
+                        p Сталеве оцинковане 1,5–2 мм
+                    .line
+                    .item
+                        p Тип склопакету
+                        p Двокамерний (3 скла), енергозберігаючий Low-E
+                    .line
+                    .item
+                        p Товщина склопакету
+                        p 24–44 мм
+                    .line
+                    .item
+                        p Газонаповнення
+                        p Аргон
+                    .line
+                    .item
+                        p Коефіцієнт теплопровідності (Uf)
+                        p 1,4 Вт/м²K
+                    .line
+                    .item
+                        p Коефіцієнт теплопередачі (Uw)
+                        p До 0,78 Вт/м²K
+                    .line
+                    .item
+                        p Звукоізоляція
+                        p До 44 дБ
+                    .line
+                    .item
+                        p Фурнітура
+                        p Німецька (Winkhaus)
+                    .line
+                    .item
+                        p Функції фурнітури
+                        p Антизламність, обмежувач відкривання, дитячий замок
+                    .line
+                    .item
+                        p Гарантія
+                        p 10 років
+
+/ section.section.comparison-section
+    .container
+        .comparison-section-wrapper
+            .top-box
+                .h2 Порівняння характеристик
+                .button-pin
+                    = image_tag "product_page/pin.svg"
+                    p Закріплення
+            .bottom-box
+                .fixed-box
+                    .cart.red
+                        .cart-top
+                            = image_tag "product_page/AluPatio/3d/1.png", alt: 'image', title: 'image'
+                            .name AluPatio
+                        .cart-bottom
+                            .box
+                                .title Склопакет
+                                .value 2-камерний
+                            .box
+                                .title Гарантія
+                                .value 10 років
+                            .box
+                                .title Теплоізоляція
+                                .value 1,4 Вт/м²K
+                            .box
+                                .title Монтажна глибина
+                                .value 76 mm
+                            .box
+                                .title Звукоізоляція
+                                .value до 44 дБ
+                .pinned-box
+                .slider-box data-controller="pin-slider"
+                    .swiper data-pin-slider-target="container"
+                        .control-box
+                            .prev-slide
+                            .swiper-pagination
+                            .next-slide
+                        .swiper-wrapper
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag "product_page/AluPassiveWin/3d/1.png", alt: 'image', title: 'image'
+                                        .name H8 AluPassive HI+/SI+
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,2 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 2
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 3
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+                            .swiper-slide
+                                .cart
+                                    .pin
+                                    .cart-top
+                                        = image_tag  "product_page/image2.png", alt: 'image', title: 'image'
+                                        .name OptiTherm 76 Premium 4
+                                    .cart-bottom
+                                        .box
+                                            .title Склопакет
+                                            .value 2-камерний
+                                        .box
+                                            .title Гарантія
+                                            .value 10 років
+                                        .box
+                                            .title Теплоізоляція
+                                            .value 1,1 Вт/м²K
+                                        .box
+                                            .title Монтажна глибина
+                                            .value 76 mm
+                                        .box
+                                            .title Звукоізоляція
+                                            .value до 44 дБ
+
+= render "contact_us"
