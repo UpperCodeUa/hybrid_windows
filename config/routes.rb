@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     get "product-page",      to: "home#product_page"
     get "alupassive-doors",  to: "home#alupassive_doors"
     get "alue-passive",      to: "home#alue_passive"
+    get "alu-style",         to: "home#alu_style"
+    get "alu-glass",         to: "home#alu_glass"
+    get "glass",             to: "home#glass"
     get "blinds",            to: "home#blinds"
 
     devise_for :users

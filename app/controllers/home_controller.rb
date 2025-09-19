@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :build_request, only: %i[index contacts product_page alupassive_doors alue_passive blinds]
+  before_action :build_request
 
   def index; end
   def catalog; end
@@ -9,6 +9,9 @@ class HomeController < ApplicationController
   def product_page; end
   def alupassive_doors; end
   def alue_passive; end
+  def glass; end
+  def alu_style; end
+  def alu_glass; end
   def blinds; end
 
   def create_request
