@@ -51,11 +51,28 @@ section.section.types-section
         .h2 Типи управління
         .types-section-wrapper
             .box
-                = image_tag "product_page/blinds/image2.jpg", alt: 'image', alt: 'image'
                 .name Автоматичні
+                .swiper.types-slider.types-slider1
+                    .swiper-wrapper
+                        .swiper-slide
+                            = image_tag "product_page/blinds/image2.jpg", alt: 'image', alt: 'image'
+                        .swiper-slide
+                            = image_tag "product_page/blinds/image4.jpg", alt: 'image', alt: 'image'
+                    .box-control
+                        .prev-slide.prev-slide-slider1
+                        .swiper-pagination
+                        .next-slide.next-slide-slider1
             .box
-                = image_tag "product_page/blinds/image3.jpg", alt: 'image', alt: 'image'
                 .name Механічні
-
+                .swiper.types-slider.types-slider2
+                    .swiper-wrapper
+                        .swiper-slide
+                            = image_tag "product_page/blinds/image5.jpg", alt: 'image', alt: 'image'
+                        .swiper-slide
+                            = image_tag "product_page/blinds/image3.jpg", alt: 'image', alt: 'image'
+                    .box-control
+                        .prev-slide.prev-slide-slider2
+                        .swiper-pagination
+                        .next-slide.next-slide-slider2
 
 = render "contact_us"

@@ -68,6 +68,36 @@ export default class extends Controller {
         prevEl: ".prev-slide-iframes",
       },
     });
+
+    const swiper4 = new Swiper(".types-slider1", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+
+      navigation: {
+        nextEl: ".next-slide-slider1",
+        prevEl: ".prev-slide-slider1",
+      },
+    });
+
+    const swiper5 = new Swiper(".types-slider2", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+
+      navigation: {
+        nextEl: ".next-slide-slider2",
+        prevEl: ".prev-slide-slider2",
+      },
+    });
   }
 
   disconnect() {
