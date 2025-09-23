@@ -195,6 +195,7 @@
         .content-wrapper {
             display: flex;
             gap: 1.111vw;
+            align-items: center;
             @media (max-width: 1024px) {
                 gap: 16px;
             }

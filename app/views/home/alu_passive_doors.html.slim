@@ -23,7 +23,7 @@ section.section.product-fs
 
 section.section.model-section
     .container
-        .h2 3Д модель
+        .h2 AluPassive Doors
     .model-box data-controller="three-sixty" data-action="mousedown->three-sixty#dragStart mousemove->three-sixty#dragMove mouseup->three-sixty#dragEnd touchstart->three-sixty#dragStart touchmove->three-sixty#dragMove touchend->three-sixty#dragEnd"
         - (1..35).each do |i|
             = image_tag "product_page/AluPatio/3d/#{i}.png", title: 'image', alt: "image #{i}", class: 'image', data: { "three-sixty-target": "image" }
@@ -33,7 +33,8 @@ section.section.characteristics-section
         .characteristics-wrapper
             .h2 Характеристики
             .content-wrapper
-                = video_tag "product_page/AluPassiveDoors/video-open.mp4", autoplay: true, loop: true, muted: true, playsinline: true, controls: false, class: "my-video"
+                / = video_tag "product_page/AluPassiveDoors/video-open.mp4", autoplay: true, loop: true, muted: true, playsinline: true, controls: false, class: "my-video"
+                = image_tag "product_page/AluPassiveDoors/video-open.gif", class: "my-video"
                 .text-box
                     p AluPassive Doors – новий рівень інженерної досконалості від "HYBRID WINDOWS".
                     p Ці двері – ідеальне доповнення до наших вікон "AluPassive": гармонійний, повторений дизайн створює цілісний архітектурний образ.
