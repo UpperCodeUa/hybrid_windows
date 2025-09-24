@@ -26,8 +26,8 @@ servers:
 proxy:
   ssl: true
   hosts:
-    hybrid-windows.com
-    www.hybrid-windows.com
+    - hybrid-windows.com
+    - www.hybrid-windows.com
 
 # Credentials for your image host.
 registry:
