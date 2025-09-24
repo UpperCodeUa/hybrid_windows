@@ -149,7 +149,10 @@
         display: flex;
         justify-content: center;
         user-select: none;
-        cursor: col-resize;
+        &.no-rotate {
+            cursor: default !important;
+        }
+        cursor: url('icons/rotate2.svg') 16 16, auto !important;
         .image {
             width: 48.611vw;
             @media (max-width: 1024px) {
