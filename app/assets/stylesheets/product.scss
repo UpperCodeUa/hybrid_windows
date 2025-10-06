@@ -10,10 +10,16 @@
     justify-content: center;
     padding: 3.333vw 0;
     &.blinds {
-        background-image: url(product_page/blinds/image1.jpg);
+        background-image: url(product_page/blinds/image6.jpg);
     }
     &.win {
         background-image: url(product_page/image2.jpg);
+    }
+    &.patio {
+        background-image: url(product_page/AluPatio/image1.jpg);
+    }
+    &.doors {
+        background-image: url(product_page/AluPassiveDoors/image1.jpg);
     }
     .inner-box {
         border-radius: 12px;
