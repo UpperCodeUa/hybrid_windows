@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["form"]
 
   connect() {
-    console.log("hCaptcha controller connected")
   }
 
   submit(event) {

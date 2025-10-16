@@ -1,6 +1,5 @@
 document.addEventListener("turbo:load", function () {
   const form = document.querySelector('.form');
-  console.log(form)
   if (!form) return;
 
   form.addEventListener('submit', function (event) {
