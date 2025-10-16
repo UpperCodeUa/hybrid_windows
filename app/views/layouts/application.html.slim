@@ -18,7 +18,7 @@ html
     = stylesheet_link_tag 'application', "data-turbo-track": "reload"
     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/swiper@11.2.2/swiper-bundle.min.css', "data-turbo-track": "reload"
     = javascript_importmap_tags
-    = javascript_include_tag "https://js.hcaptcha.com/1/api.js", async: true, defer: true
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     = favicon_link_tag 'favicon.png'
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WDP8HR3R');</script>
