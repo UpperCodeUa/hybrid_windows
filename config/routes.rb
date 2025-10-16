@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get "glass",             to: "home#glass"
     get "blinds",            to: "home#blinds"
     get "alu-passive-doors", to: "home#alu_passive_doors"
+    get "thank-you-request", to: "home#thankyou_request"
 
     devise_for :users
   end
