@@ -1,18 +1,31 @@
 section.section-calculator
-    .inner-box
-        .top-form-box
-            .h2-no-line Розрахунки
-            .subtitle Залиште номер - ми зателефонуємо та зробимо точний прорахунок під ваші потреби.
-        .center-form-box
-            .inner-box
-                .input-box
-                    label Ваше імʼя
-                    input type="text" placeholder="Андрій"
-                .input-box
-                    label Ваш номер телефону
-                    input type="text" placeholder="+38 099 202 23 88"
-            .input-box
-                label Повідомлення
-                textarea placeholder="Ваше повідомлення"
-        .bottom-form-box
-            input.button-red type="submit" value="Замовити дзвінок"
+  .inner-box
+    .top-form-box
+      .h2-no-line Розрахунки
+      .subtitle Залиште номер - ми зателефонуємо та зробимо точний прорахунок під ваші потреби.
+    = form_with model: @request, url: contacts_path, method: :post,
+            local: true, data: { turbo: false },
+
+            class: 'contact_us-box' do |f|
+      .center-form-box
+        .inner-box
+          .input-box
+            = f.label :name, "Ваше імʼя"
+            = f.text_field :name, placeholder: "Ім'я", required: true
+          .input-box
+            = f.label :phone, "Ваш номер телефону"
+            = f.telephone_field :phone,
+                    placeholder: "Номер телефону",
+                    pattern: '\+?[0-9]{10,13}',
+                    inputmode: "numeric",
+                    required: true
+        .input-box
+          = f.label :message, "Повідомлення"
+          = f.text_area :message,
+                  placeholder: "Ваше повідомлення",
+                  maxlength: 500,
+                  required: true
+      .bottom-form-box
+        .h-captcha data-sitekey="56361746-cce6-4f12-87a6-2866114c3522"
+      .bottom-form-box
+        = f.submit "Замовити дзвінок", class: "button-red"

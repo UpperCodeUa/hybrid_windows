@@ -14,20 +14,21 @@ class HomeController < ApplicationController
   def alu_glass; end
   def blinds; end
   def alu_passive_doors; end
+  def thankyou_request; end
 
   def create_request
     unless verify_hcaptcha(params["g-recaptcha-response"])
       return redirect_back fallback_location: contacts_path,
-                           alert:  I18n.t("fail_request")
+                           alert:  I18n.t("confirmation.fail_request")
     end
 
     @request = Request.new(request_params)
 
     if @request.save
       TelegramNotificationService.new(params).call if Rails.env.production?
-      redirect_back fallback_location: contacts_path, notice: I18n.t("success_request")
+      redirect_to thank_you_request_path, notice: I18n.t("confirmation.success_request")
     else
-      redirect_back fallback_location: contacts_path, alert: I18n.t("fail_request")
+      redirect_back fallback_location: contacts_path, alert: I18n.t("confirmation.fail_request")
     end
   end
 
