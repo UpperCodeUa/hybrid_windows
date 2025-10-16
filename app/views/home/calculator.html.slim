@@ -4,8 +4,7 @@ section.section-calculator
       .h2-no-line Розрахунки
       .subtitle Залиште номер - ми зателефонуємо та зробимо точний прорахунок під ваші потреби.
     = form_with model: @request, url: contacts_path, method: :post,
-            local: true, data: { turbo: false },
-
+            local: true, data: { turbo: false, controller: "hcaptcha", action: "submit->hcaptcha#submit"  },
             class: 'contact_us-box' do |f|
       .center-form-box
         .inner-box
