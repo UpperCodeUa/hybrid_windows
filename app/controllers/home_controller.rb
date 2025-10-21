@@ -67,6 +67,7 @@ class HomeController < ApplicationController
     domain = "perfectgroupcrm.kommo.com"
     token = "Ogqwh9QXWwtLZPvrJVhwbqxquCf2vWbGt7nGmFAAJGB6VkD72XxpEYDwEkxH5sS1"
 
+    # Создание контакта
     contact_data = [
       {
         name:                 request.name,
@@ -85,17 +86,19 @@ class HomeController < ApplicationController
 
     lead_data = [
       {
-        name:      "Заявка с сайта",
-        price:     0,
-        _embedded: {
+        name:                 "Заявка с сайта",
+        price:                0,
+        pipeline_id:          9_555_887,
+        status_id:            73_737_591,
+        _embedded:            {
           contacts: contact_id ? [{ id: contact_id }] : [],
         },
-        #        custom_fields_values: [
-        #          {
-        #            field_name: "Комментарий",
-        #            values: [{ value: request.message }]
-        #         }
-        #        ]
+        custom_fields_values: [
+          {
+            field_name: "Комментарий",
+            values:     [{ value: request.message }],
+          },
+        ],
       },
     ]
 
