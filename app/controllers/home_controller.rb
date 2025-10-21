@@ -65,7 +65,26 @@ class HomeController < ApplicationController
   # === Kommo CRM integration ===
   def create_kommo_lead(request)
     domain = "perfectgroupcrm.kommo.com"
-    token = "Ogqwh9QXWwtLZPvrJVhwbqxquCf2vWbGt7nGmFAAJGB6VkD72XxpEYDwEkxH5sS1"
+    token = <<~TOKEN.chomp
+      eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImViNTAyNmU2MWYzZWRk
+      Mjg4ZDcyMmQ1NDE0M2Y3ODA1MTNlMzFlNzlkMDMwZWY4OTUxNWRjZThjYmIwNDA1
+      ZThlZmNjZGMwMjI2YTk1YTUxIn0.eyJhdWQiOiJhNjMxMzY4Ni1lZGU3LTQ1YTIt
+      OGMwNi1iMDhmZmVlOWIzZDEiLCJqdGkiOiJlYjUwMjZlNjFmM2VkZDI4OGQ3MjJk
+      NTQxNDNmNzgwNTEzZTMxZTc5ZDAzMGVmODk1MTVkY2U4Y2JiMDQwNWU4ZWZjY2Rj
+      MDIyNmE5NWE1MSIsImlhdCI6MTc2MTA2NTU2MywibmJmIjoxNzYxMDY1NTYzLCJle
+      HAiOjE5MTg3NzEyMDAsInN1YiI6IjExOTI4MTM1IiwiZ3JhbnRfdHlwZSI6IiIsIm
+      FjY291bnRfaWQiOjMzNDY5NDk5LCJiYXNlX2RvbWFpbiI6ImtvbW1vLmNvbSIsInZ
+      lcnNpb24iOjIsInNjb3BlcyI6WyJjcm0iLCJmaWxlcyIsImZpbGVzX2RlbGV0ZSIs
+      Im5vdGlmaWNhdGlvbnMiLCJwdXNoX25vdGlmaWNhdGlvbnMiXSwiaGFzaF91dWlkIj
+      oiNzQxMDdiZGItNzkxYy00NDdjLTg2OTctNTAwNWQ1MGM2OTI4IiwidXNlcl9mbG
+      FncyI6MCwiYXBpX2RvbWFpbiI6ImFwaS1nLmtvbW1vLmNvbSJ9.RPfP0PCar0PuZ3
+      8IJV2TpRkAs1abdxbHk92L-Sg63NHj_475D11UvKmCrVq5npwUjJEAXnFAl4ol1ku
+      q72uPcIv89IoqA3SPmKBX5edW_muWSTPhQ8LdGZ5Bc4rLdFn5bUzBiFNMsaP2-EgG
+      nx60WXHB7H2EjiQUAjDba3k8t1QvlN5zFEFrpTk1PBKlSW0xWhtpjSokMWi09T6-I
+      mipLi7v4hNe31K4f7-LjsXzJDGR5lZnwOSqSkPNb5xyOzs9dkgcKolRUvbPcwb1FK
+      YM50KdPB5sS4PqJhreMJ70L7JEzMX7lxvz1GEzO0OQXQ6ZvghkOWjcqGjOR9EWdXo
+      OTg
+    TOKEN
 
     # Создание контакта
     contact_data = [
@@ -86,19 +105,19 @@ class HomeController < ApplicationController
 
     lead_data = [
       {
-        name:                 "Заявка с сайта",
-        price:                0,
-        pipeline_id:          9_555_887,
-        status_id:            73_737_591,
-        _embedded:            {
+        name:        "Заявка с сайта",
+        price:       0,
+        pipeline_id: 9_555_887,
+        status_id:   74_151_751,
+        _embedded:   {
           contacts: contact_id ? [{ id: contact_id }] : [],
         },
-        custom_fields_values: [
-          {
-            field_name: "Комментарий",
-            values:     [{ value: request.message }],
-          },
-        ],
+        #  custom_fields_values: [
+        #    {
+        #      field_name: "Комментарий",
+        #      values:     [{ value: request.message }],
+        #    },
+        #  ],
       },
     ]
 
