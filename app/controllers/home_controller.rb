@@ -65,18 +65,18 @@ class HomeController < ApplicationController
   # === Kommo CRM integration ===
   def create_kommo_lead(request)
     domain = "perfectgroupcrm.kommo.com"
-    token = "Ogqwh9QXWwtLZPvrJVhwbqxquCf2vWbGt7nGmFAAJGB6VkD72XxpEYDwEkxH5sS1"    
+    token = "Ogqwh9QXWwtLZPvrJVhwbqxquCf2vWbGt7nGmFAAJGB6VkD72XxpEYDwEkxH5sS1"
 
     contact_data = [
       {
-        name: request.name,
+        name:                 request.name,
         custom_fields_values: [
           {
             field_code: "PHONE",
-            values: [{ value: request.phone }]
-          }
-        ]
-      }
+            values:     [{ value: request.phone }],
+          },
+        ],
+      },
     ]
 
     uri_contacts = URI("https://#{domain}/api/v4/contacts")
@@ -85,23 +85,23 @@ class HomeController < ApplicationController
 
     lead_data = [
       {
-        name: "Заявка с сайта",
-        price: 0,
+        name:      "Заявка с сайта",
+        price:     0,
         _embedded: {
-          contacts: contact_id ? [{ id: contact_id }] : []
-        }
-#        custom_fields_values: [
-#          {
-#            field_name: "Комментарий",
-#            values: [{ value: request.message }]
-#         }
-#        ]
-      }
+          contacts: contact_id ? [{ id: contact_id }] : [],
+        },
+        #        custom_fields_values: [
+        #          {
+        #            field_name: "Комментарий",
+        #            values: [{ value: request.message }]
+        #         }
+        #        ]
+      },
     ]
 
     uri_leads = URI("https://#{domain}/api/v4/leads")
     http_post(uri_leads, lead_data, token)
-  rescue => e
+  rescue StandardError => e
     Rails.logger.error "Ошибка при создании лида в Kommo: #{e.message}"
   end
 
@@ -110,8 +110,8 @@ class HomeController < ApplicationController
     http.use_ssl = true
     req = Net::HTTP::Post.new(uri.path, {
       "Authorization" => "Bearer #{token}",
-      "Content-Type" => "application/json"
-    })
+      "Content-Type"  => "application/json",
+    },)
     req.body = data.to_json
     res = http.request(req)
     JSON.parse(res.body)
