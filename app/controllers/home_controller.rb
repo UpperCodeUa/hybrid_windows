@@ -105,19 +105,19 @@ class HomeController < ApplicationController
 
     lead_data = [
       {
-        name:        "Заявка с сайта",
-        price:       0,
-        pipeline_id: 9_555_887,
-        status_id:   74_151_751,
-        _embedded:   {
+        name:                 "Заявка с сайта",
+        price:                0,
+        pipeline_id:          9_555_887,
+        status_id:            74_151_751,
+        _embedded:            {
           contacts: contact_id ? [{ id: contact_id }] : [],
         },
-        #  custom_fields_values: [
-        #    {
-        #      field_name: "Комментарий",
-        #      values:     [{ value: request.message }],
-        #    },
-        #  ],
+        custom_fields_values: [
+          {
+            field_id: 742_952,
+            values:   [{ value: request.message }],
+          },
+        ],
       },
     ]
 
