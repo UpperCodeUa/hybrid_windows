@@ -31,7 +31,7 @@ class HomeController < ApplicationController
     if @request.save
       TelegramNotificationService.new(params).call if Rails.env.production?
 
-      create_kommo_lead(@request)
+      create_kommo_lead(@request, request)
 
       redirect_to thank_you_request_path, notice: I18n.t("confirmation.success_request")
     else
@@ -62,10 +62,10 @@ class HomeController < ApplicationController
     result["success"]
   end
 
-  # === Kommo CRM integration ===
-  def create_kommo_lead(request)
+  # rubocop:disable Metrics/CyclomaticComplexity
+  def create_kommo_lead(local_request, controller_request)
     domain = "perfectgroupcrm.kommo.com"
-    token = <<~TOKEN.chomp
+    token = <<~TOKEN.delete("\n")
       eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImViNTAyNmU2MWYzZWRk
       Mjg4ZDcyMmQ1NDE0M2Y3ODA1MTNlMzFlNzlkMDMwZWY4OTUxNWRjZThjYmIwNDA1
       ZThlZmNjZGMwMjI2YTk1YTUxIn0.eyJhdWQiOiJhNjMxMzY4Ni1lZGU3LTQ1YTIt
@@ -85,47 +85,69 @@ class HomeController < ApplicationController
       YM50KdPB5sS4PqJhreMJ70L7JEzMX7lxvz1GEzO0OQXQ6ZvghkOWjcqGjOR9EWdXo
       OTg
     TOKEN
-
-    # Создание контакта
-    contact_data = [
-      {
-        name:                 request.name,
-        custom_fields_values: [
-          {
-            field_code: "PHONE",
-            values:     [{ value: request.phone }],
-          },
-        ],
-      },
-    ]
-
-    uri_contacts = URI("https://#{domain}/api/v4/contacts")
-    contact_response = http_post(uri_contacts, contact_data, token)
-    contact_id = contact_response.dig("_embedded", "contacts", 0, "id")
-
-    lead_data = [
-      {
-        name:                 "Заявка с сайта",
-        price:                0,
-        pipeline_id:          9_555_887,
-        status_id:            74_151_751,
-        _embedded:            {
-          contacts: contact_id ? [{ id: contact_id }] : [],
+    begin
+      contact_data = [
+        {
+          name:                 local_request.name,
+          custom_fields_values: [
+            {
+              field_code: "PHONE",
+              values:     [{ value: local_request.phone }],
+            },
+          ],
         },
-        custom_fields_values: [
-          {
-            field_id: 742_952,
-            values:   [{ value: request.message }],
-          },
-        ],
-      },
-    ]
+      ]
 
-    uri_leads = URI("https://#{domain}/api/v4/leads")
-    http_post(uri_leads, lead_data, token)
-  rescue StandardError => e
-    Rails.logger.error "Ошибка при создании лида в Kommo: #{e.message}"
+      uri_contacts = URI.parse("https://#{domain}/api/v4/contacts")
+      contact_response = http_post(uri_contacts, contact_data, token)
+      contact_id = contact_response.dig("_embedded", "contacts", 0, "id")
+
+      # UTM
+      utm = {}
+      if controller_request.env["HTTP_REFERER"]
+        ref = URI.parse(controller_request.env["HTTP_REFERER"])
+        utm = URI.decode_www_form(ref.query || "").to_h if ref.query
+      end
+
+      field_map = {
+        utm_content:  736_392,
+        utm_medium:   736_394,
+        utm_campaign: 736_396,
+        utm_source:   736_398,
+        utm_term:     736_400,
+        utm_referrer: 736_402,
+      }
+
+      custom_fields_values = []
+      field_map.each do |utm_key, field_id|
+        value = utm[utm_key.to_s]
+        next if value.blank?
+
+        custom_fields_values << { field_id: field_id, values: [{ value: value }] }
+      end
+
+      # add comment
+      custom_fields_values << { field_id: 742_952, values: [{ value: local_request.message }] }
+
+      lead_data = [
+        {
+          name:                 "Заявка с сайта",
+          price:                0,
+          pipeline_id:          9_555_887,
+          status_id:            74_151_751,
+          _embedded:            { contacts: contact_id ? [{ id: contact_id }] : [] },
+          custom_fields_values: custom_fields_values,
+        },
+      ]
+
+      uri_leads = URI.parse("https://#{domain}/api/v4/leads")
+      http_post(uri_leads, lead_data, token)
+    rescue StandardError => e
+      Rails.logger.error("Ошибка при создании лида в Kommo: #{e.message}")
+      nil
+    end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def http_post(uri, data, token)
     http = Net::HTTP.new(uri.host, uri.port)
@@ -136,6 +158,7 @@ class HomeController < ApplicationController
     },)
     req.body = data.to_json
     res = http.request(req)
+    # Rails.logger.info("Kommo response: #{res.code} #{res.body}")
     JSON.parse(res.body)
   end
 end
