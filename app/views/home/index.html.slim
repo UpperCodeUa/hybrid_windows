@@ -8,7 +8,8 @@
         = link_to "Повернутися на головну", root_path, class: 'link'
 
 section.section.first-screen
-    = video_tag "home/fs-video-safari.mp4", loop: "", autoplay: "", muted: "", playsinline: "", class: "video"
+    = video_tag "home/fs-video-safari.mp4", loop: "", autoplay: "", muted: "", playsinline: "", class: "video video-desk"
+    = video_tag "home/fs-video-safari-mobile.mp4", loop: "", autoplay: "", muted: "", playsinline: "", class: "video video-mobile"
     .container
         .first-screen-wrapper
             .inner-box
@@ -40,6 +41,7 @@ section.section.catalog-section
             .next-slide-catalog
 
 section.section.philosophy-section
+    #about-section
     .container
         .h2 Філософія Hybrid Windows
     .container
@@ -71,10 +73,14 @@ section.section.about-us-section
     .container
         .h2 Про нас
     .about-us-section-wrapper
-        .video-box data-controller="video"
+        .video-box.video-desk data-controller="video"
             .play data-video-target="playButton"
                 = image_tag "home/play.png", title: 'image', alt: 'image', class: 'play'
             = video_tag "home/fs-video.mp4", loop: true, playsinline: true, data: { "video-target": "video", action: "click->video#toggle" }
+        .video-box.video-mobile data-controller="video"
+            .play data-video-target="playButton"
+                = image_tag "home/play.png", title: 'image', alt: 'image', class: 'play'
+            = video_tag "home/fs-video-mobile.mp4", loop: true, playsinline: true, data: { "video-target": "video", action: "click->video#toggle" }
         .content-box
             p Ми створюємо вікна, які поєднують найкраще — довершений дизайн і довговічність алюмінієвих вікон та найвищі показники теплоізоляції ПВХ вікон.
             p Власне виробництво дозволяє задовільнити будь-яку вимогу наших клієнтів, забезпечуючи при цьому бездоганну якість продукту.
