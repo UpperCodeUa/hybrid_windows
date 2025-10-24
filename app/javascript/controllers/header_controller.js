@@ -115,10 +115,16 @@ export default class extends Controller {
     }
   }
 
-  toggleMenu() {
-    this.menuButtonTarget.classList.toggle("active")
-    this.mobileNavTarget.classList.toggle("active")
-    this.headerTarget.classList.toggle("active")
+  toggleMenu(event) {
+    if (event && event.currentTarget && event.currentTarget.tagName === 'A') {
+      this.menuButtonTarget.classList.remove("active")
+      this.mobileNavTarget.classList.remove("active")
+      this.headerTarget.classList.remove("active")
+    } else {
+      this.menuButtonTarget.classList.toggle("active")
+      this.mobileNavTarget.classList.toggle("active")
+      this.headerTarget.classList.toggle("active")
+    }
   }
 
   scrollToSection = (event) => {
