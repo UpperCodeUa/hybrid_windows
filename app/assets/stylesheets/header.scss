@@ -21,6 +21,9 @@
     @media (max-width: 1024px) {
         padding: 12px 0;
     }
+    @media (max-width: 400px) {
+        padding: 16px 0;
+    }
     .header-wrapper {
         display: flex;
         align-items: center;
@@ -31,6 +34,9 @@
                 display: flex;
                 gap: 32px;
                 align-items: center;
+            }
+            @media (max-width: 420px) {
+                gap: 16px;
             }
         }
         .mobile-button {
@@ -45,6 +51,11 @@
             height: 40px;
             @media (max-width: 1024px) {
                 display: block;
+            }
+            @media (max-width: 400px) {
+                font-size: 12px;
+                padding: 8px 8px;
+                height: auto;
             }
         }
         .box {
