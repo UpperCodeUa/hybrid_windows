@@ -16,11 +16,11 @@ header.header data-header-target="header"
                 .line
                 .line
 .mobile-nav-box data-header-target="mobileNav"
-    = link_to "Продукти",    products_path, class: "#{'active' if current_page?(products_path)}"
-    = link_to "Каталог",     catalog_path, class: "#{'active' if current_page?(catalog_path)}"
-    = link_to "Калькулятор", calculator_path, class: "#{'active' if current_page?(calculator_path)}"
+    = link_to "Продукти",    products_path, class: "#{'active' if current_page?(products_path)}", data: { action: "click->header#toggleMenu" }
+    = link_to "Каталог",     catalog_path, class: "#{'active' if current_page?(catalog_path)}", data: { action: "click->header#toggleMenu" }
+    = link_to "Калькулятор", calculator_path, class: "#{'active' if current_page?(calculator_path)}", data: { action: "click->header#toggleMenu" }
     = link_to "Про нас",     root_path(anchor: 'about-section'), data: { action: "click->header#toggleMenu" }
-    = link_to "Контакти",    contacts_path, class: "#{'active' if current_page?(contacts_path)}"
-    = link_to "0 (63) 230 86 65", "tel:0632308665"
+    = link_to "Контакти",    contacts_path, class: "#{'active' if current_page?(contacts_path)}", data: { action: "click->header#toggleMenu" }
+    = link_to "0 (63) 230 86 65", "tel:0632308665", data: { action: "click->header#toggleMenu" }
 
 
