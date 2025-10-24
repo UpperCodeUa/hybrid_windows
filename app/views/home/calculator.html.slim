@@ -4,7 +4,7 @@ section.section-calculator
       .h2-no-line Розрахунки
       .subtitle Залиште номер - ми зателефонуємо та зробимо точний прорахунок під ваші потреби.
     = form_with model: @request, url: contacts_path, method: :post,
-            local: true, data: { turbo: false, controller: "hcaptcha", action: "submit->hcaptcha#submit"  },
+            local: true, data: { turbo: false },
             class: 'contact_us-box' do |f|
       .center-form-box
         .inner-box
@@ -23,7 +23,7 @@ section.section-calculator
           = f.text_area :message,
                   placeholder: "Ваше повідомлення",
                   maxlength: 500
-      .bottom-form-box
+      / .bottom-form-box
         .h-captcha data-sitekey="56361746-cce6-4f12-87a6-2866114c3522"
       .bottom-form-box
         = f.submit "Замовити дзвінок", class: "button-red"

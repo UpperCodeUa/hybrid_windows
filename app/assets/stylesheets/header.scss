@@ -19,12 +19,34 @@
         backdrop-filter: blur(4px);
     }
     @media (max-width: 1024px) {
-        padding: 16px 0;
+        padding: 12px 0;
     }
     .header-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .box-buttons {
+            display: none;
+            @media (max-width: 1024px) {
+                display: flex;
+                gap: 32px;
+                align-items: center;
+            }
+        }
+        .mobile-button {
+            border-radius: 8px;
+            background: #D91722;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 140%;
+            padding: 10px 11px;
+            display: none;
+            height: 40px;
+            @media (max-width: 1024px) {
+                display: block;
+            }
+        }
         .box {
             display: flex;
             gap: 1.667vw;
@@ -113,9 +135,9 @@
 
 .mobile-nav-box {
     position: fixed;
-    height: calc(100vh - 64px);
+    height: calc(1000px);
+    top: 64px;
     left: 0;
-    bottom: 0;
     width: 100%;
     background: rgba(14, 14, 14, 0.80);
     backdrop-filter: blur(4px);

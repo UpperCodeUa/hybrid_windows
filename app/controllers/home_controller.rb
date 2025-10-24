@@ -21,10 +21,10 @@ class HomeController < ApplicationController
   def thankyou_request; end
 
   def create_request
-    unless verify_hcaptcha(params["g-recaptcha-response"])
-      return redirect_back fallback_location: contacts_path,
-                           alert: I18n.t("confirmation.fail_request")
-    end
+    # unless verify_hcaptcha(params["g-recaptcha-response"])
+    # return redirect_back fallback_location: contacts_path,
+    #  alert: I18n.t("confirmation.fail_request")
+    # end
 
     @request = Request.new(request_params)
 
